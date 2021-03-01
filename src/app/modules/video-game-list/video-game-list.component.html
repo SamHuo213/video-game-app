@@ -1,0 +1,10 @@
+<kendo-grid [data]="videoGameList">
+  <kendo-grid-column title="Name" field="name">
+    <ng-template kendoGridCellTemplate let-data>
+      <div class="link-light" (click)="onVideoGameClick(data.id)">{{data.name}}</div>
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column title="Genre" field="genre"></kendo-grid-column>
+  <kendo-grid-column title="Difficulty" field="difficulty"></kendo-grid-column>
+  <kendo-grid-column title="Rating" field="rating"></kendo-grid-column>
+</kendo-grid>

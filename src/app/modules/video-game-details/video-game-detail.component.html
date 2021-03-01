@@ -1,0 +1,20 @@
+<form [formGroup]="videoGameForm">
+  <div class="row">
+    <label>Name: </label>
+    <input formControlName="name" type="text" />
+  </div>
+  <div class="row">
+    <label>Genre: </label>
+    <input formControlName="genre" type="text" />
+  </div>
+  <div class="row">
+    <label>Difficulty: </label>
+    <input formControlName="difficulty" type="number" pattern="[1-5]" />
+  </div>
+  <div class="row">
+    <label>Rating: </label>
+    <input formControlName="rating" type="number" pattern="[1-5]" />
+  </div>
+</form>
+<button (click)="onCancel()">Cancel</button>
+<button (click)="onSave()">Save</button>
